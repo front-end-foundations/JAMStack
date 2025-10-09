@@ -1,13 +1,10 @@
 ---
 layout: layout.html
 pageTitle: New York Today
+pageClass: home
 ---
 
 ## Articles
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-A list of articles will appear here
-
-- bullet one
-- etc
+<main class="stories"></main>
+<button>Show Stories</button>

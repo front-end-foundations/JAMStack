@@ -6,10 +6,21 @@
     <title>My Blog</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body>
+  <body class="p-{{ pageClass }}">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {% for page in collections.page %}
+        <li class="t-{{page.data.pageClass}}">
+          <a href="{{ page.url | url }}">{{ page.data.navTitle }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
     <main class="content">
       <h1>{{ pageTitle }}</h1>
       {{ content }}
     </main>
   </body>
+  <script src="/js/scripts.js"></script>
 </html>
